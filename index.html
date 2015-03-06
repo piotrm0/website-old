@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <img style="float: left; padding: 10px;" src="/images/wolf_gap1_mug.jpg"/>
+  <a href="http://www.cs.umd.edu/projects/PL/" class="logo"><img width="200" src="images/logo_plum.png"/></a>
+  <a href="http://www.cs.umd.edu" class="logo"><img width="180"
+  style="background: gray; padding: 15px" src="images/logo_umdcs.png"/></a>
+  <a href="http://www.umd.edu" class="logo"><img width="100" src="images/logo_umd.gif"/></a>
+
+  <p>
+    I'm a post-doc advised
+      by <a href="http://www.cs.umd.edu/~mwh/">Mike Hicks</a> within
+      the <a href="http://www.cs.umd.edu/projects/PL/">programming
+      languages group (PLUM)</a> of
+      the <a href="http://www.cs.umd.edu">Computer Science
+      department</a> at the <a href="http://www.umd.edu">University of
+      Maryland, College Park</a>.
+  </p>
+
+  <p>
+    My interest center around the modeling, measuring, and limiting
+    (adversary) knowledge in the context of information security. I'm
+    also interested in probabilistic programming which serves as a
+    convenient tool for these tasks, and secure multi-party
+    computation which is abound in knowledge-related problems.
+  </p>
+
+  <h1 class="page-heading">Timeline</h1>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <div style="clear: both;">
+        {% if post.image %}
+        <img class="side_thumb" src="{{ post.image }}"/>
+        {% endif %}
+
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>

@@ -1,0 +1,24 @@
+# Site settings
+title: Piotr Mardziel
+email: piotrm@mardziel.com
+description:
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://piotr.mardziel.com" # the base hostname & protocol for your site
+twitter_username: piotrm0
+github_username:  piotrm0
+
+# Build settings
+markdown: kramdown
+gems: ['jekyll/scholar']
+keep_files: [images docs]
+
+scholar:
+ repository: docs
+ style: apa
+ locale: en
+ source: ./_bibliography
+ bibliography_template: bib
+ bibliography: mardziel.bib
+ details_dir: bibliography
+ details_layout: paper.html
+ details_link: details
