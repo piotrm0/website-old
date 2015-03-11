@@ -11,6 +11,7 @@
 % workshops
 @string{plas = acm # " SIGPLAN Workshop on Programming Languages and Analysis for Security (PLAS)"}
 @string{fcs = "Workshop on Foundations of Computer Security (FCS)"}
+@string{nipspp = "NIPS Workshop on Probabilistic Programming"}
 
 % fake conferences
 @string{acita = "Anual Conference of the International Technology Alliance (ACITA)"}
@@ -124,21 +125,67 @@ author{michael-clarkson,
  institution = {GWU},
 }
 
-@INPROCEEDINGS{mardziel14time,
-  AUTHOR = {Piotr Mardziel and Mario Alvim and Michael Hicks and Michael R. Clarkson},
-  TITLE = {Quantifying Information Flow for Time-Varying Data},
-  BOOKTITLE = inproc # sap,
-  MONTH = MAY,
-  YEAR = 2014,
-  ABSTRACT = {A metric is proposed for quantifying leakage of
-                  information about secrets and about how secrets
-                  change over time. The metric is used with a model of
-                  information flow for probabilistic, interactive
-                  systems with adaptive adversaries. The model and
-                  metric are implemented in a probabilistic
-                  programming language and used to analyze several
-                  examples. The analysis demonstrates that adaptivity
-                  increases information flow. }
+@phdthesis{mardziel15thesis,
+  AUTHOR = {Piotr Mardziel},
+  TITLE = {Modeling, Measuring, and Limiting Adversary Knowledge},
+  YEAR = {2015},
+  MONTH = {JAN},
+  SCHOOL = {University of Maryland Department of Computer Science},
+  ABSTRACT = {Users participating in online services are required to
+                  relinquish control over potentially sensitive
+                  personal information, exposing them to intentional
+                  or unintentional miss-use of said information by the
+                  service providers. Users wishing to avoid this must
+                  either abstain from often extremely useful services,
+                  or provide false information which is usually
+                  contrary to the terms of service they must abide by.
+                  An attractive middle-ground alternative is to
+                  maintain control in the hands of the users and
+                  provide a mechanism with which information that is
+                  necessary for useful services can be queried. Users
+                  need not trust any external party in the management
+                  of their information but are now faced with the
+                  problem of judging when queries by service providers
+                  should be answered or when they should be refused
+                  due to revealing too much sensitive information.<br/><br/>
+                  
+                  Judging query safety is difficult. Two queries may
+                  be benign in isolation but might reveal more than a
+                  user is comfortable with in combination.
+                  Additionally malicious adversaries who wish to learn
+                  more than allowed might query in a manner that
+                  attempts to hide the flows of sensitive information.
+                  Finally, users cannot rely on human inspection of
+                  queries due to its volume and the general lack of
+                  expertise.<br/><br/>
+
+                  This thesis tackles the automation of query
+                  judgment, giving the self-reliant user a means with
+                  which to discern benign queries from dangerous or
+                  exploitive ones. The approach is based on explicit
+                  modeling and tracking of the knowledge of
+                  adversaries as they learn about a user through the
+                  queries they are allowed to observe. The approach
+                  quantifies the absolute risk a user is exposed,
+                  taking into account all the information that has
+                  been revealed already when determining to answer a
+                  query. Proposed techniques for approximate but sound
+                  probabilistic inference are used to tackle the
+                  tractability of the approach, letting the user
+                  tradeoff utility (in terms of the queries judged
+                  safe) and efficiency (in terms of the expense of
+                  knowledge tracking), while maintaining the guarantee
+                  that risk to the user is never underestimated. We
+                  apply the approach to settings where user data
+                  changes over time and settings where multiple users
+                  wish to pool their data to perform useful
+                  collaborative computations without revealing too
+                  much information.<br/><br/>
+
+                  By addressing one of the major
+                  obstacles preventing the viability of personal
+                  information control, this work brings the attractive
+                  proposition closer to reality.}
 }
 
 @inproceedings{mardziel14loss,
@@ -160,7 +207,7 @@ author{michael-clarkson,
 
 @techreport{mardziel14timeTR,
   AUTHOR = {Piotr Mardziel and Mario Alvim and Michael Hicks and Michael R. Clarkson},
-  TITLE = {Quantifying Information Flow for Time-Varying Data},
+  TITLE = {Quantifying Information Flow for Dynamic Secrets},
   BOOKTITLE = inproc # sap,
   MONTH = MAY,
   YEAR = 2014,
@@ -176,6 +223,38 @@ author{michael-clarkson,
                   programming language and used to analyze several
                   examples. The analysis demonstrates that adaptivity
                   increases information flow. }
+}
+
+@INPROCEEDINGS{mardziel14time,
+  AUTHOR = {Piotr Mardziel and Mario Alvim and Michael Hicks and Michael R. Clarkson},
+  TITLE = {Quantifying Information Flow for Dynamic Secrets},
+  BOOKTITLE = inproc # sap,
+  MONTH = MAY,
+  YEAR = 2014,
+  ABSTRACT = {A metric is proposed for quantifying leakage of
+                  information about secrets and about how secrets
+                  change over time. The metric is used with a model of
+                  information flow for probabilistic, interactive
+                  systems with adaptive adversaries. The model and
+                  metric are implemented in a probabilistic
+                  programming language and used to analyze several
+                  examples. The analysis demonstrates that adaptivity
+                  increases information flow. }
+}
+
+@INPROCEEDINGS{mardziel13acita,
+  AUTHOR = {Piotr Mardziel and Michael Hicks and Jonathan Katz and Matthew Hammer and Aseem Rastogi and Mudhakar Srivatsa},
+  TITLE = {Knowledge inference for optimizing and enforcing secure computations},
+  BOOKTITLE = acita,
+  NOTE = {This short paper consists of coherent excerpts from several prior papers},
+  YEAR = 2013,
+  MONTH = SEP,
+  ABSTRACT = {We present several techniques that aim to compute the
+                  belief or knowledge a party might have about the
+                  values of hidden variables involved in the
+                  computation. These techniques can be used for
+                  enforcing knowledge-based security policies and for
+                  optimizing secure multiparty computations.}
 }
 
 @inproceedings{rastogi13knowledge,
@@ -214,21 +293,6 @@ author{michael-clarkson,
                   enjoyed by our approach. We have implemented our
                   approach, and present a preliminary experimental
                   evaluation. }
-}
-
-@INPROCEEDINGS{mardziel13acita,
-  AUTHOR = {Piotr Mardziel and Michael Hicks and Jonathan Katz and Matthew Hammer and Aseem Rastogi and Mudhakar Srivatsa},
-  TITLE = {Knowledge inference for optimizing and enforcing secure computations},
-  BOOKTITLE = inproc # acita,
-  NOTE = {This short paper consists of coherent excerpts from several prior papers},
-  YEAR = 2013,
-  MONTH = SEP,
-  ABSTRACT = {We present several techniques that aim to compute the
-                  belief or knowledge a party might have about the
-                  values of hidden variables involved in the
-                  computation. These techniques can be used for
-                  enforcing knowledge-based security policies and for
-                  optimizing secure multiparty computations.}
 }
 
 @ARTICLE{mardziel13dynamiclong,
@@ -274,6 +338,31 @@ author{michael-clarkson,
                   while incurring little to no loss in precision.}
 }
 
+@INPROCEEDINGS{mardziel12probabilistic,
+  TITLE = {Probabilistic Computation for Information Security},
+  AUTHOR = {Piotr Mardziel and Kasturi Raghavan},
+  BOOKTITLE = nipspp,
+  MONTH = DEC,
+  YEAR = 2012,
+  ABSTRACT = {Probabilistic computation is a convenient means of
+                  mechanically reasoning about a variety of
+                  information security problems. At its core,
+                  information security concerns itself with measuring
+                  or limiting the knowledge an adversary might attain
+                  from interacting with a protected system.
+                  Probabilistic inference lets one compute this
+                  knowledge explicitly as long as the interaction can
+                  be described as a program in a suitable
+                  probabilistic language that supports conditioning.
+                  Security concerns, however, require soundness
+                  guarantees on probabilistic inference which are
+                  generally not present in machine learning
+                  applications. We summarize some recent work on
+                  probabilistic computing for information security and
+                  highlight challenging aspects that still need to be
+                  addressed.}
+}
+
 @INPROCEEDINGS{mardziel12smc,
   TITLE = {Knowledge-Oriented Secure Multiparty Computation},
   AUTHOR = {Piotr Mardziel and Michael Hicks and Jonathan Katz and Mudhakar Srivatsa},
@@ -301,39 +390,6 @@ author{michael-clarkson,
                   the SMC belief tracking method-prove them sound, and
                   discuss their precision/performance tradeoffs using
                   a series of experiments. }
-}
-
-@INPROCEEDINGS{mardziel11dynamic,
-  TITLE = {Dynamic Enforcement of Knowledge-based Security Policies},
-  AUTHOR = {Piotr Mardziel and Stephen Magill and Michael Hicks and Mudhakar Srivatsa},
-  BOOKTITLE = inproc # csf,
-  YEAR = 2011,
-  MONTH = JUN,
-  PAGES = {114--128},
-  ABSTRACT = {This paper explores the idea of knowledge-based
-                  security policies, which are used to decide whether
-                  to answer queries over secret data based on an
-                  estimation of the querier's (possibly increased)
-                  knowledge given the results. Limiting knowledge is
-                  the goal of existing information release policies
-                  that employ mechanisms such as noising,
-                  anonymization, and redaction. Knowledge-based
-                  policies are more general: they increase flexibility
-                  by not fixing the means to restrict information
-                  flow. We enforce a knowledge-based policy by
-                  explicitly tracking a model of a querier's belief
-                  about secret data, represented as a probability
-                  distribution, and denying any query that could
-                  increase knowledge above a given threshold. We
-                  implement query analysis and belief tracking via
-                  abstract interpretation using a novel probabilistic
-                  polyhedral domain, whose design permits trading off
-                  precision with performance while ensuring estimates
-                  of a querier's knowledge are sound. Experiments with
-                  our implementation show that several useful queries
-                  can be handled efficiently, and performance scales
-                  far better than would more standard implementations
-                  of probabilistic computation based on sampling.}
 }
 
 @TECHREPORT{mardziel11dynamicTR,
@@ -370,10 +426,43 @@ author{michael-clarkson,
                   probabilistic computation based on sampling.}
 }
 
+@INPROCEEDINGS{mardziel11dynamic,
+  TITLE = {Dynamic Enforcement of Knowledge-based Security Policies},
+  AUTHOR = {Piotr Mardziel and Stephen Magill and Michael Hicks and Mudhakar Srivatsa},
+  BOOKTITLE = inproc # csf,
+  YEAR = 2011,
+  MONTH = JUN,
+  PAGES = {114--128},
+  ABSTRACT = {This paper explores the idea of knowledge-based
+                  security policies, which are used to decide whether
+                  to answer queries over secret data based on an
+                  estimation of the querier's (possibly increased)
+                  knowledge given the results. Limiting knowledge is
+                  the goal of existing information release policies
+                  that employ mechanisms such as noising,
+                  anonymization, and redaction. Knowledge-based
+                  policies are more general: they increase flexibility
+                  by not fixing the means to restrict information
+                  flow. We enforce a knowledge-based policy by
+                  explicitly tracking a model of a querier's belief
+                  about secret data, represented as a probability
+                  distribution, and denying any query that could
+                  increase knowledge above a given threshold. We
+                  implement query analysis and belief tracking via
+                  abstract interpretation using a novel probabilistic
+                  polyhedral domain, whose design permits trading off
+                  precision with performance while ensuring estimates
+                  of a querier's knowledge are sound. Experiments with
+                  our implementation show that several useful queries
+                  can be handled efficiently, and performance scales
+                  far better than would more standard implementations
+                  of probabilistic computation based on sampling.}
+}
+
 @INPROCEEDINGS{mardziel10acita,
   TITLE = {Secure sharing in distributed information management applications: problems and directions},
   AUTHOR = {Piotr Mardziel and Adam Bender and Michael Hicks and Dave Levin and Mudhakar Srivatsa and Jonathan Katz},
-  BOOKTITLE = inproc # acita,
+  BOOKTITLE = acita,
   MONTH = SEP,
   YEAR = 2010,
   ABSTRACT = {Interaction between entities who may not trust each

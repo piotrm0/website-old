@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Paper
 ---
 <div class="paper">
   <header class="post-header">
@@ -11,7 +12,31 @@ layout: default
 
     <br/><br/>
 
-    {% if page.links.pdf %} <a href="{{page.links.pdf}}"><img src="/images/icon_pdf.png"/></a><br/><br/> {% endif %}
+    {% if page.links["dissertation.pdf"] %}
+    <a href="{{page.links["dissertation.pdf"]}}"><img class="icon" src="/images/icon_pdf.png" alt="dissertation pdf"/></a>(double-spaced dissertation format)
+    {% endif %}
+    {% if page.links["paper.pdf"] %}
+    <a href="{{page.links["paper.pdf"]}}"><img class="icon" src="/images/icon_pdf.png" alt="paper pdf"/></a>(paper)
+    {% endif %}
+
+    {% if page.links["pres.pdf"] %}
+    <a href="{{page.links["pres.pdf"]}}"><img class="icon" src="/images/icon_pdf.png" alt="presentation pdf"/></a>(slides)
+    {% endif %}
+    {% if page.links["pres.pptx"] %}
+    <a href="{{page.links["pres.pptx"]}}"><img class="icon" src="/images/icon_pptx.png" alt="presentation powerpoint"/></a>(slides)
+    {% endif %}
+    {% if page.links["pres.ppt"] %}
+    <a href="{{page.links["pres.ppt"]}}"><img class="icon" src="/images/icon_ppt.png" alt="presentation powerpoint"/></a>(slides)
+    {% endif %}
+
+    {% if page.links["poster.pptx"] %}
+    <a href="{{page.links["poster.pptx"]}}"><img class="icon" src="/images/icon_pptx.png" alt="poster powerpoint"/></a>(poster)
+    {% endif %}
+    {% if page.links["poster.doc"] %}
+    <a href="{{page.links["poster.doc"]}}"><img class="icon" src="/images/icon_doc.png" alt="poster document"/></a>(poster)
+    {% endif %}
+
+    <br/><br/>
 
     <p>{{ page.entry.abstract }}</p>
 
@@ -20,5 +45,4 @@ layout: default
     <pre>{{ page.entry.bibtex }}</pre>
 
   </article>
-
 </div>

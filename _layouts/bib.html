@@ -1,5 +1,5 @@
 ---
 ---
-{% if links.pdf %} <a href="{{links.pdf}}"><img src="/images/icon_pdf.png"/></a> {% endif %}
-{{ reference }}
-
+{% if links['paper.pdf'] %} <a href="{{links['paper.pdf']}}"><img class="mediumicon" src="/images/icon_pdf.png"/></a> {% endif %}
+{{ reference key }}
+<a href="{{details}}">(details)</a>

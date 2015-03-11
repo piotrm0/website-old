@@ -5,10 +5,6 @@ layout: default
 <div class="home">
 
   <img style="float: left; padding: 10px;" src="/images/wolf_gap1_mug.jpg"/>
-  <a href="http://www.cs.umd.edu/projects/PL/" class="logo"><img width="200" src="images/logo_plum.png"/></a>
-  <a href="http://www.cs.umd.edu" class="logo"><img width="180"
-  style="background: gray; padding: 15px" src="images/logo_umdcs.png"/></a>
-  <a href="http://www.umd.edu" class="logo"><img width="100" src="images/logo_umd.gif"/></a>
 
   <p>
     I'm a post-doc advised
@@ -28,9 +24,22 @@ layout: default
     computation which is abound in knowledge-related problems.
   </p>
 
-  <h1 class="page-heading">Timeline</h1>
+  <p>
+    See more in <a href="/papers"><img src="/images/icon_pdf.png"
+    class="mediumicon"> my papers</a>
+    and <a href="/talks"><img src="/images/icon_ppt.png"
+    class="mediumicon"> my talks</a>.
+  </p>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <br/><br/>
+
+  <h1>Current</h1>
+  <ul class="post-list">
+    <h4><li>The slides for "Modeling, Measuring, and Limiting Adversary
+    Knowledge" can be found at <a href="/talks#thesis">my talks</a> page.</h4>
+  </ul>
+
+  <h1>Timeline</h1>
 
   <ul class="post-list">
     {% for post in site.posts %}
@@ -42,12 +51,20 @@ layout: default
 
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+        <h4>
+          {% if post.ref %}
+          {% cite_details post.ref --text {{post.title}} %}
+          {% else %}
+          <a class="post-link" href="{{post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          {% endif %}
+        </h4>
+
         </div>
       </li>
     {% endfor %}
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
   </ul>
 
 </div>

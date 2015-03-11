@@ -1,24 +1,30 @@
 # Site settings
-title: Piotr Mardziel
-email: piotrm@mardziel.com
+title: Piotr (Peter) Mardziel
+email: piotrm@gmail.com
 description:
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://piotr.mardziel.com" # the base hostname & protocol for your site
 twitter_username: piotrm0
 github_username:  piotrm0
+bitbucket_username:  piotrm
 
 # Build settings
 markdown: kramdown
 gems: ['jekyll/scholar']
-keep_files: [images docs]
+keep_files: [images docs .nojekyll]
+exclude: [Gemfile, Gemfile.lock, ieee_bare.csl, Makefile, .gitignore, .git, .sass-cache]
+destination: ../piotrm0.github.io
+keep_files: [.git]
 
 scholar:
  repository: docs
- style: apa
+ style: ieee_bare.csl
  locale: en
+ sort_by: year,month_numeric
+ order: descending
  source: ./_bibliography
  bibliography_template: bib
  bibliography: mardziel.bib
  details_dir: bibliography
  details_layout: paper.html
- details_link: details
+ details_link: ""
