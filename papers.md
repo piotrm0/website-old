@@ -5,7 +5,7 @@ permalink: /papers/
 inheader: true
 ---
 
-![Science!](/images/science.jpeg)  
+<img class="bigmug" alt="science!" src="/images/science.jpeg"/>
 
 &nbsp;
 

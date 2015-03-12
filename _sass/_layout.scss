@@ -120,45 +120,33 @@
     padding-left: $spacing-unit / 2;
 }
 
-.footer-col-1 {
-    width: -webkit-calc(25% - (#{$spacing-unit} / 2));
-    width:         calc(25% - (#{$spacing-unit} / 2));
+.footer-col-1,.footer-col-2 {
+    width: -webkit-calc(40% - (#{$spacing-unit} / 2));
+    width:         calc(40% - (#{$spacing-unit} / 2));
 }
-
-.footer-col-2 {
-    width: -webkit-calc(15% - (#{$spacing-unit} / 2));
-    width:         calc(15% - (#{$spacing-unit} / 2));
-}
-
 .footer-col-3 {
-    width: -webkit-calc(60% - (#{$spacing-unit} / 2));
-    width:         calc(60% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+    width:         calc(20% - (#{$spacing-unit} / 2));
     text-align: right;
 }
 
-.footer-col-3 img {
-   padding-left: 10px;
-   padding-right: 10px;
-}
-
 @include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
-    }
-
-    .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
+.footer-col-1,.footer-col-2 {
+    width: -webkit-calc(40% - (#{$spacing-unit} / 2));
+    width:         calc(40% - (#{$spacing-unit} / 2));
+}
+.footer-col-3 {
+    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+    width:         calc(20% - (#{$spacing-unit} / 2));
+    text-align: right;
     }
 }
 
 @include media-query($on-palm) {
     .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
+        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+        width:         calc(50% - (#{$spacing-unit} / 2));
+        text-align: left;
     }
 }
 
@@ -218,7 +206,6 @@
 
     h2 {
         font-size: 32px;
-
         @include media-query($on-laptop) {
             font-size: 28px;
         }
@@ -226,7 +213,6 @@
 
     h3 {
         font-size: 26px;
-
         @include media-query($on-laptop) {
             font-size: 22px;
         }
@@ -234,7 +220,6 @@
 
     h4 {
         font-size: 20px;
-
         @include media-query($on-laptop) {
             font-size: 18px;
         }
@@ -308,4 +293,20 @@ h4 {
   @include media-query($on-laptop) {
     font-size: 18px;
   }
+}
+
+.mug {
+  padding-right: 20px;
+  padding-bottom: 20px;
+  float: left;
+}
+
+@include media-query($on-palm) {
+  .mug {
+       width: 40%;
+  }
+}
+
+.bigmug {
+  width: 100%;
 }
