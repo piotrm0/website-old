@@ -17,14 +17,14 @@ destination: ../piotrm0.github.io
 keep_files: [.git]
 
 scholar:
- repository: docs
- style: ieee_bare.csl
- locale: en
- sort_by: year,month_numeric
- order: descending
- source: ./_bibliography
- bibliography_template: bib
- bibliography: mardziel.bib
- details_dir: bibliography
- details_layout: paper.html
- details_link: ""
+  repository: docs
+  style: ieee_bare.csl
+  locale: en
+  sort_by: year,month_numeric
+  order: descending
+  source: ./_bibliography
+  bibliography_template: bib
+  bibliography: mardziel.bib
+  details_dir: bibliography
+  details_layout: paper.html
+  details_link: ""

@@ -8,32 +8,42 @@ title: Paper
   </header>
 
   <article class="post-content">
-    {{ page.entry.author }}
+    {% for a in page.names %}
+    <div style="float: left; padding: 5px; text-align: center;">
+      <a href="{% author {{a}} --byname --website %}">
+        <img class="author_icon" style="padding-bottom: 10px;" src="{% author {{a}} --byname --icon %}"/><br/>
+        {% author {{a}} --byname %}
+      </a>
+    </div>
+      
+    {% endfor %}
 
-    <br/><br/>
+    <div style="clear: both;"/>
+
+    <br/>
 
     {% if page.links["dissertation.pdf"] %}
-    <a href="{{page.links["dissertation.pdf"]}}"><img class="icon" src="/images/icon_pdf.png" alt="dissertation pdf"/></a>(double-spaced dissertation format)
+    <a href="{{page.links["dissertation.pdf"]}}"><img class="icon" src="/images/icon_pdf.png" alt="dissertation pdf"/>(double-spaced dissertation format)</a>
     {% endif %}
     {% if page.links["paper.pdf"] %}
-    <a href="{{page.links["paper.pdf"]}}"><img class="icon" src="/images/icon_pdf.png" alt="paper pdf"/></a>(paper)
+    <a href="{{page.links["paper.pdf"]}}"><img class="icon" src="/images/icon_pdf.png" alt="paper pdf"/>(paper)</a>
     {% endif %}
 
     {% if page.links["pres.pdf"] %}
-    <a href="{{page.links["pres.pdf"]}}"><img class="icon" src="/images/icon_pdf.png" alt="presentation pdf"/></a>(slides)
+    <a href="{{page.links["pres.pdf"]}}"><img class="icon" src="/images/icon_pdf.png" alt="presentation pdf"/>(slides)</a>
     {% endif %}
     {% if page.links["pres.pptx"] %}
-    <a href="{{page.links["pres.pptx"]}}"><img class="icon" src="/images/icon_pptx.png" alt="presentation powerpoint"/></a>(slides)
+    <a href="{{page.links["pres.pptx"]}}"><img class="icon" src="/images/icon_pptx.png" alt="presentation powerpoint"/>(slides)</a>
     {% endif %}
     {% if page.links["pres.ppt"] %}
-    <a href="{{page.links["pres.ppt"]}}"><img class="icon" src="/images/icon_ppt.png" alt="presentation powerpoint"/></a>(slides)
+    <a href="{{page.links["pres.ppt"]}}"><img class="icon" src="/images/icon_ppt.png" alt="presentation powerpoint"/>(slides)</a>
     {% endif %}
 
     {% if page.links["poster.pptx"] %}
-    <a href="{{page.links["poster.pptx"]}}"><img class="icon" src="/images/icon_pptx.png" alt="poster powerpoint"/></a>(poster)
+    <a href="{{page.links["poster.pptx"]}}"><img class="icon" src="/images/icon_pptx.png" alt="poster powerpoint"/>(poster)</a>
     {% endif %}
     {% if page.links["poster.doc"] %}
-    <a href="{{page.links["poster.doc"]}}"><img class="icon" src="/images/icon_doc.png" alt="poster document"/></a>(poster)
+    <a href="{{page.links["poster.doc"]}}"><img class="icon" src="/images/icon_doc.png" alt="poster document"/>(poster)</a>
     {% endif %}
 
     <br/><br/>

@@ -1,0 +1,77 @@
+- username: piotrm
+  name: Piotr Mardziel
+  website: http://piotr.mardziel.com
+  email: piotrm@gmail.com
+  icon: http://piotr.mardziel.com/images/wolf_gap1_mug.jpg
+
+- username: aseem
+  name: Aseem Rastogi
+  website: http://www.cs.umd.edu/~aseem
+  email: aseem@cs.umd.edu
+  icon: http://www.cs.umd.edu/~aseem/pic.jpg
+
+- username: hammer
+  name: Matthew Hammer
+  website: http://www.cs.umd.edu/~hammer
+  email: hammer@cs.umd.edu
+  icon: http://www.cs.umd.edu/~hammer/me_rounded.png
+
+- username: mwh
+  name: Michael Hicks
+  website: http://www.cs.umd.edu/~mwh
+  email: mwh@cs.umd.edu
+  icon: http://www.cs.umd.edu/~mwh/mike2011.jpg
+
+- username: smagill
+  name: Stephen Magill
+  website: https://galois.com/team/stephen-magill
+  email: stephen.magill@gmail.com
+  icon: http://galois.com/wp-content/uploads/2014/10/Stephen_Magill.jpg
+
+- username: msrivats
+  name: Mudhakar Srivatsa
+  website: http://researcher.watson.ibm.com/researcher/view.php?person=us-msrivats
+  email: msrivats@us.ibm.com
+  icon: http://researcher.watson.ibm.com/researcher/photos/779.jpg
+
+- username: jkatz
+  name: Jonathan Katz
+  website: http://www.cs.umd.edu/~jkatz
+  email: jkatz@cs.umd.edu
+  icon: http://mnemosyne.umd.edu/tomcat/newsengine/articleImg/article6085.large.png
+
+- username: abender
+  name: Adam Bender
+  website: http://www.google.com
+  email: abender@gmail.com
+
+- username: dml
+  name: Dave Levin
+  website: http://www.cs.umd.edu/~dml
+  email: dml@cs.umd.edu
+  icon: http://www.cs.umd.edu/~dml/dml_canossa.jpg
+
+- username: msalvim
+  name: Mario Alvim
+  website: https://sites.google.com/site/msalvimjr
+  email: msalvim@dcc.ufmg.br
+  icon: https://sites.google.com/site/msalvimjr/_/rsrc/1380582081949/home/ms.jpg?height=400&width=300
+  
+- username: clarkson
+  name: Michael R. Clarkson
+  website: http://www.cs.cornell.edu/~clarkson
+  email: clarkson@cs.cornell.edu
+  icon: http://www.cs.cornell.edu/~clarkson/img/mrc_slope300.jpg
+  
+
+- username: khuzani
+  name: Arman Khouzani
+  website: http://isg.rhul.ac.uk/~uaai002
+  email: khuzani@gmail.com
+  icon: http://isg.rhul.ac.uk/~uaai002/Images/khouzani001.jpg
+
+- username: ccid
+  name: Carlos Cid
+  website: http://www.isg.rhul.ac.uk/~ccid
+  email: Carlos.Cid@rhul.ac.uk
+  icon: http://enigma.isg.rhul.ac.uk/graphic_files/carlos.jpg

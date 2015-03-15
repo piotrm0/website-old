@@ -9,4 +9,23 @@ inheader: true
 
 &nbsp;
 
-{% bibliography %}
+# In Journals
+
+{% bibliography --query @article %}
+
+# In Conferences
+
+{% bibliography --query @conference %}
+
+# In Workshops
+
+{% bibliography --query @inproceedings %}
+
+# Tech Reports
+
+{% bibliography --query @techreport %}
+
+# Other
+
+{% bibliography --query @phdthesis @misc %}
+
