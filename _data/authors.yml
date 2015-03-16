@@ -63,7 +63,6 @@
   email: clarkson@cs.cornell.edu
   icon: http://www.cs.cornell.edu/~clarkson/img/mrc_slope300.jpg
   
-
 - username: khuzani
   name: Arman Khouzani
   website: http://isg.rhul.ac.uk/~uaai002
@@ -75,3 +74,9 @@
   website: http://www.isg.rhul.ac.uk/~ccid
   email: Carlos.Cid@rhul.ac.uk
   icon: http://enigma.isg.rhul.ac.uk/graphic_files/carlos.jpg
+
+- username: kastur
+  name: Kasturi Raghavan
+  website: http://nesl.ee.ucla.edu/person/show/318
+  email: kastur@gmail.com
+  
