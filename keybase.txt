@@ -1,0 +1,76 @@
+==================================================================
+https://keybase.io/piotrm
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://piotr.mardziel.com
+  * I am piotrm (https://keybase.io/piotrm) on keybase.
+  * I have a public key with fingerprint 3A15 611F DA7B 0760 90A9
+  * 1B38 A9CB 5D00 B060 0ACC
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "3a15611fda7b076090a91b38a9cb5d00b0600acc",
+            "host": "keybase.io",
+            "key_id": "a9cb5d00b0600acc",
+            "kid":
+    "0101984cca5c8c666167c731a491b37ccbe9a7372f8f34da8c27dea0234a52e6e38c0a",
+            "uid": "74e1c3b249c3f099ab60c372e3645f00",
+            "username": "piotrm"
+        },
+        "revoke": {
+            "sig_ids": [
+                "c68a3337e311106e2bd5b759436c43ef9ecc2cba8d2d036c33e47f8f1d6c94a50f"
+            ]
+        },
+        "service": {
+            "hostname": "piotr.mardziel.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1429308943,
+    "expire_in": 157680000,
+    "prev":
+    "b145f9ba34f553a9ca6e7bf2fd2471aab02b99265d4c96878abc2d3169d9188d",
+    "seqno": 16,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.8
+Comment: https://keybase.io/crypto
+
+yMJkAnicbZJdaBVHFMdvtJoaEmNLKSFK0fHBgjHM7OzO7GxELIh5EPRB4lcNN/O1
+N9vk3r3u3lxjNEr8iij44De+iImGghF8CEitJbehD62SRqUiCDZt0wdNg/Wl1UDE
+zgYFHzovw5z5n9/5nzPzQ9XcVEXZ8Zme4vSilCq7+/3ljlQTOlq9F4hQ7QHeXtCm
+Zzc/yGV0lI+CXAF4AHPkEIR8xamAlEAGOUMCu5xJ4SgIBSQQcilBHWgN4yTDYASP
+dX0Qmpg5pANlov+jb5u9gAgi5tpScke6khCCCJUUI24ndaiUQjNOMbV818e24q60
+qNIcWtjmjqWJxq6E3OA6ZnHU1khiYdlMYh8yxgWB0mRrTGzHhzARxjrK8aw26nwQ
+FqIs6K4DkS6GbTrpPw4yxnIMvC+BJC7HGFONEUKQaEsoR1CH2ZhIG2ufaSktKbir
+LAVNDGNtU+MTKSKZsQd90GzYpl4xkLPwZEbv167P8kh1Bbq9XoZZ4y0fhYVQhu3m
+vrVQyHuJtcKefKLfrUX6LSktgpwyz2QSijqKgzAHPGSUshAkaGRbDEPX2KwDujMf
+RDodJAqHEhealZTRRYMUyMyECY5t33GweSJONBW+5SvLpohzAS3BmEUcZUtGXOpy
+IS2FEWGKIddVIOltVy40bGJ88oxhmvHleKEj0qB7pLTzg1RZRWr+vDnJT0tVLFj0
+7v+Nn/wwdXjb+n0t8a/7lqyeGlx8yNswGPOJpWea1td0XRl6UMZHb238R9x+9Muf
+O0f/XVra7P3W0F51tnnJixMfP672dv1uZ9xnU8emf6yczH275iZ80NI8Z7q/T/be
+mHtq+Uwt+Humko58dr333tirq/NOb/quqRxlG8tZ+Xa/7tbBVTUvDzWsGLz0+dc7
+xreuOrl/67WW2qs/be+/WDt5yenpbql6s0WfuPxV4xcrNy4b/vTunWPpx3+VPvq5
+fabG6xwKW+90ZXpHN8RFa2LlxSMLqx+uuH2+e3hdw/C9tW+G8hOlT573LT4z9c3I
+QKkT3J8ceNJ4uKdvcrzq6YUDj+433eyf/8f1scpzA6/H/gPivEa9
+=JJpb
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/piotrm
+
+==================================================================

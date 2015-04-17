@@ -22,5 +22,5 @@ part of a robotics team. He likes dogs.
 #### Currently
 
 Piotr is looking for a job. See [<img class="mediumicon"
-src="/images/icon_pdf.png"/> his CV](/docs/mardziel15cvtechnical.pdf)
+src="/images/icon_pdf.png"/> his CV](/docs/mardziel15cv.pdf)
 and give him a job.
