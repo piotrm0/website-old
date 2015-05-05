@@ -12,6 +12,14 @@ inheader: true
 
 <!--# My talks #-->
 
+<span class="post-meta">April 28, 2015</span>
+
+### <a name="dagstuhl"/> [<img class="mediumicon" src="/images/icon_pptx.png"/>Probabilistic Programming for Security](/docs/mardziel15dagstuhl.pres.pptx) ###
+
+This talk is based mostly on my early older papers {% cite mardziel11dynamic mardziel11dynamicTR mardziel13dynamiclong --linkdetails %} as well as about probabilistic programming for reasoning about security in general.
+
+* presented at Dagstuhl Seminar on Challenges and Trends in Probabilistic Programming, April 28, 2015
+
 <span class="post-meta">March 17, 2015</span>
 
 ### <a name="thesis"/> [<img class="mediumicon" src="/images/icon_pptx.png"/> Modeling, Measuring, and Limiting Adversary Knowledge](/docs/mardziel15thesis.latest-pres.pptx) ###
