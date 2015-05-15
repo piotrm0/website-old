@@ -12,6 +12,14 @@ inheader: true
 
 <!--# My talks #-->
 
+<span class="post-meta">May 7, 2015</span>
+
+### <a name="hcss"/> [<img class="mediumicon" src="/images/icon_pptx.png"/>Models and Games for Quantifying Vulnerability of Secret Information](/docs/mardziel15hcss.pres.pptx) ###
+
+This talk is based mostly on my newer papers {% cite mardziel14time mardziel14timeTR mardziel14loss khouzani15picking --linkdetails %}.
+
+* presented at the High Confidence Software and Systems Conference, May 7, 2015
+
 <span class="post-meta">April 28, 2015</span>
 
 ### <a name="dagstuhl"/> [<img class="mediumicon" src="/images/icon_pptx.png"/>Probabilistic Programming for Security](/docs/mardziel15dagstuhl.pres.pptx) ###
