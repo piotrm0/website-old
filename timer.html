@@ -1,0 +1,259 @@
+<html>
+  <head>
+    <title>talk timer</title>
+    <style type="text/css">
+      @keyframes warn1 {
+      0% {background-color: black;}
+      50% {background-color: green;}
+      100% {background-color: black;}
+      }
+
+      @keyframes warn2 {
+      0% {background-color: black;}
+      50% {background-color: yellow;}
+      100% {background-color: black;}
+      }
+
+      @keyframes warn3 {
+      0% {background-color: black;}
+      50% {background-color: red;}
+      100% {background-color: black;}
+      }
+
+      .animate1 {
+        animation-duration: 0.5s;
+        animation-name: warn1;
+      }
+      .animate2 {
+        animation-duration: 0.5s;
+        animation-name: warn2;
+      }
+      .animate3 {
+        animation-duration: 0.1s;
+        animation-name: warn3;
+      }
+
+      .noanim {
+      }
+      
+      body {
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      
+        background: black;
+        text-align: center;
+        color: white;
+      }
+      
+      #clock {
+        color: white;
+        font-size: 40vw;
+      }
+    </style>
+    <script>
+    
+var timer;
+      
+var remain_time;
+var end_time;
+var now_time;
+
+var started_date;
+var ending_date;
+var elapsed_time;
+
+var warning = false;
+var autowarn = true;
+var userwarn = false;
+
+function get_now() {
+    var d = new Date();
+    return Math.floor(d.getTime() / 1000);
+}
+
+function start_clock() {
+    var sb = document.getElementById("startbutton");
+    var pb = document.getElementById("pausebutton");
+    var i = document.getElementById("len");
+    if (timer) {
+        clearInterval(timer);
+        timer = undefined;
+        sb.innerHTML = "Start";
+        pb.disabled = true;
+        pb.innerHTML = "Pause";
+        now_time = get_now();
+        end_time = now_time + Math.floor(i.value * 60);
+        tick();
+        warnstop();
+    } else {
+        start_time = get_now();
+        end_time = start_time + i.value * 60;
+        timer = setInterval(tick, 1000);
+        sb.innerHTML = "Reset";
+        pb.disabled = false;
+        pb.innerHTML = "Pause";
+        tick();
+    }
+}
+
+function pause_clock() {
+    var sb = document.getElementById("startbutton");
+    var pb = document.getElementById("pausebutton");
+    if (timer) {
+        clearInterval(timer);
+        timer = undefined;
+        var now = get_now();
+        remain_time = end_time - now;
+        pb.innerHTML = "Resume";
+        sb.disabled = true;
+    } else {
+        now_time = get_now();
+        end_time = now_time + remain_time;
+        pb.innerHTML = "Pause";
+        timer = setInterval(tick, 1000);
+        sb.disabled = false;
+        tick();
+    }
+}
+      
+function pad(s) {
+    if (s < 10) {
+        return "0" + s;
+    } else {
+        return s;
+    }
+}
+              
+function tick() {
+    now_time = get_now();
+    
+    var remain = end_time - now_time;
+
+    if (remain < 0) {
+        return;
+    }
+    
+    var seconds = remain;
+    var minutes = Math.floor(seconds / 60);
+    var hours   = Math.floor(minutes / 60);
+    seconds = pad(seconds % 60);
+    minutes = pad(minutes % 60);
+    hours   = pad(hours % 60);
+
+    var ret = minutes + ":" + seconds;
+    if (hours > 0) {
+        ret = hours + ":" + ret;
+    }
+
+    document.getElementById("clock").innerHTML = ret;
+
+    var v1 = 60 * document.getElementById("warn1").value;
+    var v2 = 60 * document.getElementById("warn2").value;
+    var v3 = 60 * document.getElementById("warn3").value;
+    
+    if (! userwarn) {
+        if (remain <= v1 && Math.abs (remain - v1) <= 15) {
+            warnifnot(1);
+        } else if (remain <= v2 && Math.abs (remain - v2) <= 10) {
+            warnifnot(2);
+        } else if (remain <= v3) {
+            warnifnot(3);
+        } else {
+            warnstop();
+        }
+    }
+}
+
+function warnifnot(level) {
+    if (! warning) {
+        warn(level);
+    }
+}
+
+function warnstop() {
+    if (warning) {
+        warn(0);
+    }
+}
+
+function warnnow(level) {
+    if (warning) {
+        userwarn = false;
+    } else {
+        userwarn = true;
+    }
+    warn(level);
+}
+
+function warn(level) {
+    var buttons = [document.getElementById("bwarn1"),
+                   document.getElementById("bwarn2"),
+                   document.getElementById("bwarn3")];
+
+    if (warning) {
+        warning = false;
+        
+        document.body.className = "noanim";
+        for (var bi in buttons) {
+            var b = buttons[bi];
+            b.innerHTML = "Warn now";
+        }
+
+    } else {
+        warning = true;
+
+        document.body.className += " animate" + level;
+        
+        for (var bi in buttons) {
+            var b = buttons[bi];
+            b.innerHTML = "Stop warning";
+        }        
+    }
+}
+
+    </script>
+  </head>
+  <body>
+    <div id="clock">25:00</div>
+
+    <div id="controls" style="text-align: center;">
+    
+    <table>
+    
+    <tr>
+    <td>Timer length:</td>
+    <td>
+    <input type="text" id="len" value="25" size="5"></input>
+    <button id="startbutton" onclick="start_clock()">Start</button>
+    <button id="pausebutton" disabled="true" onclick="pause_clock()">Pause</button><br/>
+    </td>
+    </tr>
+
+    <tr>
+    <td>Light Warning at:</td>
+    <td>
+    <input type="text" id="warn1" value="5" size="5"></input>
+    <button id="bwarn1" onclick="warnnow(1)">Warn Now</button>
+    </td>
+    </tr>
+
+    <tr>
+    <td>Medium Warning at:</td>
+    <td>
+    <input type="text" id="warn2" value="1" size="5"></input>
+    <button id="bwarn2" onclick="warnnow(2)">Warn Now</button>
+    </td>
+    </tr>
+
+    <tr>
+    <td>End Warning at:</td>
+    <td>
+    <input type="text" id="warn3" value="0" size="5"></input>
+    <button id="bwarn3" onclick="warnnow(3)">Warn Now</button>
+    </td>
+    </tr>
+    </table>
+      
+    </div>
+</body>
+</html>

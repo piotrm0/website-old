@@ -6,7 +6,7 @@ permalink: /about/
 inheader: true
 ---
 
-<img class="bigmug" alt="photo of Piotr" src="/images/wolf_gap1.jpg"/>
+<img class="bigmug" alt="photo of Piotr" src="images/wolf_gap1.jpg"/>
 
 #### Bio
 
